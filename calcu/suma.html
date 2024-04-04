@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calcu/js/estilos.css">
+    <title>Suma de matrices</title>
+
+</head>
+
+<body text="black">
+  <p>
+    4.1 Suma de matrices: <br>
+
+Si las matrices A=(aij) y B=(bij) tienen la misma dimensión, la matriz suma es: A+B=(aij+bij).
+<br>
+La matriz suma se obtiene sumando los elementos de las dos matrices que ocupan la misma posición, 
+Dadas las siguientes matrices:
+<br>
+
+
+4.1.1 Propiedades de la suma de matrices
+<br>
+Interna: la suma de dos matrices de orden n es otra matriz cuya dimensión es nxn
+<br>
+Asociativa:
+<br>
+A + (B + C) = (A + B) + C
+<br>
+Elemento neutro:
+<br>
+A + 0 = A
+<br>
+Donde 0 es la matriz nula de la misma dimensión que la matriz A.
+<br>
+Elemento opuesto:
+<br>
+A+ (−A) = 0
+<br>
+La matriz opuesta es aquella en que todos los elementos están cambiados de signo.
+<br>
+Conmutativa:
+<br>
+A + B = B + A [4].
+<br>
+  </p>
+
+    <script>
+        var a=new Array(3);
+        b=new Array(3);
+        c=new Array(3)   
+       function suma(){
+
+            
+      for(i=1;i<=3;i++) {  
+         a[i]=[0,0,0,0];
+         b[i]= [0,0,0,0];
+         c[i]= [0,0,0,0]
+          for(j=1;j<=3;j++)
+             {  a[i][j]=parseFloat(document.matriza[3*i+j-4].value)
+                 b[i][j]=parseFloat(document.matrizb[3*i+j-4].value)    }    }
+      for(i=1;i<=3;i++){   
+           for(j=1;j<=3;j++){
+              c[i][j]=a[i][j]+b[i][j]
+              document.matrizc[3*i+j-4].value=c[i][j] 
+
+              }    }
+      
+        }
+        
+
+    </script>
+     Suma de matrices (3x3)
+     <section class="portafolio">
+       <div>
+       <form name="matriza">
+     
+     A=<BR> 
+                 <input type="text" size="3">
+                 <input type="text" size="3">
+                 <input type="text" size="3"><BR>
+                 <input type="text" size="3">
+                 <input type="text" size="3">
+                 <input type="text" size="3"><BR>
+                 <input type="text" size="3">
+                 <input type="text" size="3">     
+                 <input type="text" size="3">
+     
+     </form>
+     
+     <form name="matrizb">
+     
+     B=<BR> 
+                 <input type="text" size="3">
+                 <input type="text" size="3">
+                 <input type="text" size="3"><BR>
+                 <input type="text" size="3">
+                 <input type="text" size="3">
+                 <input type="text" size="3"><BR>
+                 <input type="text" size="3">
+                 <input type="text" size="3">     
+                 <input type="text" size="3"><br>
+                 <br>
+                 <input type="button" value="Resultado" onClick=" suma()">
+     
+     </form>
+     </div>
+     <br>
+     
+      
+     
+     <form name="matrizc">
+     <br>
+     Matriz C=A+B<BR>
+     
+                 <input type="text" size="3">
+                 <input type="text" size="3">
+                 <input type="text" size="3"><BR>
+                 <input type="text" size="3">
+                 <input type="text" size="3">
+                 <input type="text" size="3"><BR>
+                 <input type="text" size="3">
+                 <input type="text" size="3">     
+                 <input type="text" size="3">
+       </form>
+     
+     </section>
+ 
+</body>
+</html>

@@ -1,0 +1,36 @@
+.slider{
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+}
+.slider ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+
+    animation: cambio 29s infinite alternate;
+    
+}
+.imagen{
+    width: 1280px;
+    height: 360px;
+}
+
+.slider li{
+    list-style: none;
+    width: 100%;
+}
+.slider div{
+    width: 100%;
+}
+@keyframes cambio{
+    0% { margin-left: 0;}
+    20% { margin-left: 0;}
+
+    25%{ margin-left: -135%;}
+    45%{ margin-left: -135%;}
+
+    55%{ margin-left: -270%;}
+    100%{ margin-left: -270%;}
+
+}
